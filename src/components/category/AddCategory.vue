@@ -9,6 +9,8 @@
 </template>
 
 <script>
+    import CategoryService from '../../service/CategoryService' ;
+
     export default {
         name : 'AddCategory',
         data () {
@@ -24,6 +26,13 @@
         methods : {
             saveCategory () {
                 console.log(`Mi objeto es:`, this.category)
+                CategoryService.create(this.category)
+                .then(response => {
+                    console.log(response.data);
+                })
+                .catch(e => {
+                     console.log(e);
+                })
             } 
         }
     }
