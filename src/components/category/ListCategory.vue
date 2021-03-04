@@ -3,6 +3,9 @@
         <div class="col-md-12">
             <h4> </h4>
         </div>
+        <div class="col-md-10">
+            <a :href="'/AddCategory'" class="btn btn-info">Agregar categoría</a>
+        </div>
         <div class="col-md-12">
             <table>
                 <thead>
@@ -15,7 +18,7 @@
                     <tr v-for="(category, i) in categories" v-bind:key="i">
                         <td>{{i+1}}</td>
                         <td>{{category.type}}</td>
-                        <td>{{category.status}}</td>
+                        <td>{{category.status === true ? 'Activo' : 'Inactivo'}}</td>
                         <td>
 
                         </td>

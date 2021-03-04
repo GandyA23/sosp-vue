@@ -2,7 +2,7 @@
     <div>
         <div class="form-group">
             <label for="type">Tipo</label>
-            <input name="type" type="text" class="form-control" id="type" v-model="category.name" required />
+            <input name="type" type="text" class="form-control" id="type" v-model="category.type" required />
         </div>
         <button class="btn btn-success" @click="saveCategory">Guardar</button>
     </div>

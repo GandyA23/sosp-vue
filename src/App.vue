@@ -3,26 +3,21 @@
     <nav class="navbar navbar-expand navbar-dark bg-dark">
       <div class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a href="" class="nav-link">Categoría</a>
+          <router-link to="/" class="nav-link">Categoría</router-link> 
         </li>
       </div>
     </nav>
 
     <div class="container mt-3" >
       <!--Aquí se muestran mis componentes-->
-      <AddCategory />    
+      <router-view />    
     </div>
   </div>
 </template>
 
 <script>
-  import AddCategory from './components/category/AddCategory.vue';
-
   export default {
-    name: 'App',
-    components : {
-      AddCategory
-    }
+    name: 'App'
   }
 </script>
 
