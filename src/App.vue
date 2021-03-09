@@ -5,6 +5,9 @@
         <li class="nav-item">
           <router-link to="/categorias" class="nav-link">Categoría</router-link> 
         </li>
+        <li class="nav-item">
+          <router-link to="/tipos-archivos" class="nav-link">Tipos de archivo</router-link> 
+        </li>
       </div>
     </nav>
 

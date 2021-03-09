@@ -6,11 +6,13 @@ Vue.use(Router);
 export default new Router({
     mode: 'history',
     routes: [
-        // Lista de categorias
+        // Categorias
         { path: '/categorias', name: 'categorias', component: () => import('./components/category/ListCategory') },
-        // Agregar de categorias
         { path: '/addCategory', name: 'addCategory', component: () => import('./components/category/AddCategory') },
-        // Editar Categoria
-        { path: '/categorias/:id', name: 'editCategory', component: () => import('./components/category/EditCategory') }
+        { path: '/categorias/:id', name: 'editCategory', component: () => import('./components/category/EditCategory') },
+        // Tipos de archivo
+        { path: '/tipos-archivos', name: 'tipos-archivo', component: () => import('./components/fileType/ListFileType') },
+        { path: '/addFileType', name: 'addFileType', component: () => import('./components/fileType/AddFileType') },
+        { path: '/tipos-archivos/:id', name: 'editFileType', component: () => import('./components/fileType/EditFileType') }
     ]
 });
