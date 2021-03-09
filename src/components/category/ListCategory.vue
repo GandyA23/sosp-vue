@@ -4,21 +4,30 @@
             <h4> </h4>
         </div>
         <div class="col-md-10">
-            <a :href="'/AddCategory'" class="btn btn-info">Agregar categoría</a>
+            <a :href="'/AddCategory'" class="btn btn-info">
+                Agregar categoría
+                <!--Agrega un ícono (IconsPlugin)-->
+                <b-icon-plus-square-fill />
+            </a>
         </div>
         <div class="col-md-12">
-            <table>
+            <table class="table table-hover">
                 <thead>
                     <th>Núm</th>
                     <th>Tipo</th>
                     <th>Estado</th>
-                    <th>Acciones</th>
+                    <th colspan="2">Acciones</th>
                 </thead>
                 <tbody>
                     <tr v-for="(category, i) in categories" v-bind:key="i">
                         <td>{{i+1}}</td>
                         <td>{{category.type}}</td>
                         <td>{{category.status === true ? 'Activo' : 'Inactivo'}}</td>
+                        <td>
+                            <a :href="'/categorias/'+category.id" class="btn-primary">
+                                <b-icon-pen-fill />
+                            </a>
+                        </td>
                         <td>
 
                         </td>

@@ -12,6 +12,14 @@ class CategoryService {
     create (obj) {
         return api.post('/categorias', obj);
     }
+
+    update (obj) {
+        return api.put('/categorias', obj);
+    }
+
+    delete (id) {
+        return api.delete(`/categorias/${id}`);
+    }
 }
 
 export default new CategoryService();

@@ -7,8 +7,9 @@ export default new Router({
     mode: 'history',
     routes: [
         // Lista de categorias
-        { path: '/', name: 'categorias', component: () => import('./components/category/ListCategory.vue') },
+        { path: '/', name: 'categorias', component: () => import('./components/category/ListCategory') },
         // Agregar de categorias
-        { path: '/addCategory', name: 'addCategory', component: () => import('./components/category/AddCategory.vue') }
+        { path: '/addCategory', name: 'addCategory', component: () => import('./components/category/AddCategory') },
+        { path: '/categorias/:id', name: 'editCategory', component: () => import('./components/category/EditCategory') }
     ]
 });

@@ -29,6 +29,8 @@
                 CategoryService.create(this.category)
                 .then(response => {
                     console.log(response.data);
+                    // Redirecciona a raíz (Listado)
+                    this.$router.push("/");
                 })
                 .catch(e => {
                      console.log(e);
