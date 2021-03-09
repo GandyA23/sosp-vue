@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-import BootstrapVue from 'bootstrap-vue/dist/bootstrap-vue'
+import {BootstrapVue, IconsPlugin} from 'bootstrap-vue'
 import router from './router'
 
 Vue.config.productionTip = false
@@ -8,8 +8,11 @@ Vue.config.productionTip = false
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 
-// Vue debe de usar Bootstrap 
+// Vue usará Bootstrap 
 Vue.use(BootstrapVue);
+
+// Vue usará los iconos de Bootstrap
+Vue.use(IconsPlugin);
 
 new Vue({
   router, 
