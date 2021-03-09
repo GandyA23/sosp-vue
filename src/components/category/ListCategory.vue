@@ -24,12 +24,16 @@
                         <td>{{category.type}}</td>
                         <td>{{category.status === true ? 'Activo' : 'Inactivo'}}</td>
                         <td>
-                            <a :href="'/categorias/'+category.id" class="btn-primary">
-                                <b-icon-pen-fill />
+                            <a :href="'/categorias/'+category.id">
+                                <b-button variant="primary">
+                                    <b-icon-pen-fill />
+                                </b-button>   
                             </a>
                         </td>
                         <td>
-
+                            <b-button variant="danger" @click="deleteCategory(category.id)">
+                                <b-icon-trash-fill />
+                            </b-button>
                         </td>
                     </tr>
                 </tbody>
@@ -59,7 +63,19 @@
                 .catch(e => {
                     console.log(e);
                 })
-            }
+            },
+            deleteCategory (id) {
+                if (confirm("¿Estas seguro de eliminar este registro?")) {
+                    CategoryService.delete(id)
+                    .then(response => {
+                        console.log(response);
+                        this.getAllCategories();
+                    })
+                    .catch(e => {
+                        console.log(e);
+                    })
+                }
+            } 
         },
         mounted () {
             // Acciones cuando carga

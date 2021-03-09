@@ -32,7 +32,7 @@ export default {
             .then(response => {
                 console.log(response);
                 // Redirecciona a raíz (Listado)
-                this.$router.push("/");
+                this.$router.push("/categorias");
             })
             .catch(e => {
                 console.log(e);
